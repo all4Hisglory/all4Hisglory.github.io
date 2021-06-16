@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Budget
+{% endblock %}
+
+{% block main %}
+    <h2 align="center" class="back">Add a Transaction</h2>
+    <form action="/budget" method="post" align="center" class="back">
+        <input autocomplete="off" autofocus type="text" name="description" placeholder="Description">
+        <select name="type">
+            <option value="increase">+</option>
+            <option value="decrease">-</option>
+        </select>
+        <input autocomplete="off" autofocus type="text" name="amount" placeholder="Amount">
+        <input type="date" name="date">
+        <button type="submit" class="btn btn-default">Add to Budget</button>
+    </form>
+    
+    <table>
+        <thead>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Amount</td>
+            <td>Date</td>
+        </thead>
+        <tbody>
+            {% for item in row %}
+            <tr>
+                <td>{{ item.description }}</td>
+                <td>{{ item.type }}</td>
+                <td>{{ item.amount }}</td>
+                <td>{{ item.date }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{ balanceuse | usd }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

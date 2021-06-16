@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Profile
+{% endblock %}
+
+{% block main %}
+    
+    <main class="main">
+        <h1 align="center">Welcome to your profile!</h1>
+        {% for item in row %}
+        <img src="static/prfp.jpg" class="prfp">
+        <div class="items">
+        <h5>Name</h5>
+        <p>{{ item.name }}</p>
+        <a href="/name"><button class="btn btn-primary" type="submit">Update</button></a>
+        </div>
+        <div class="items">
+        <h5>Age</h5>
+        <p>{{ item.age }}</p>
+        <a href="/age"><button class="btn btn-primary" type="submit">Update</button></a>
+        </div>
+        <div class="items">
+        <h5>Email</h5>
+        <p>{{ item.email }}</p>
+        <a href="/email"><button class="btn btn-primary" type="submit">Update</button></a>
+        </div>
+        <div class="items">
+        <h5>Phone Number</h5>
+        <p>{{ item.phone }}</p>
+        <a href="/phone"><button class="btn btn-primary" type="submit">Update</button></a>
+        </div>
+        <div class="items">
+        <h5>About Me</h5>
+        <p>{{ item.bio }}</p>
+        </div>
+        <a href="/about"><button class="btn btn-primary" type="submit">Update</button></a>
+        {% endfor %}
+         <div class="main">
+            <br>
+        </div>
+        <div class="main">
+            <br>
+        </div>
+        <div class="main">
+            <br>
+        </div>
+        <div class="main">
+            <br>
+        </div>
+        <div class="main">
+            <br>
+        </div>
+    </main>
+
+{% endblock %}

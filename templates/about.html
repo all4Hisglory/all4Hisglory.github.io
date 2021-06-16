@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update About Section
+{% endblock %}
+
+{% block main %}
+    <form action="/about" method="post">
+        <div class="form-group">
+            <input class="form-control" autofocus autocomplete="off" type="text" name="about" placeholder="Update About Me Section">
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}

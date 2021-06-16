@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Setup
+{% endblock %}
+
+{% block main %}
+
+    <form action="/setup" method="post">
+        <input autocomplete="off" autofocus type="text" name="balance" placeholder="Current Balance">
+        <button type="submit" class="btn btn-default">Set Up Budget</button>
+    </form>
+
+{% endblock %}

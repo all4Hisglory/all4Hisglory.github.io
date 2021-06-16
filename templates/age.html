@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Age
+{% endblock %}
+
+{% block main %}
+    <h2 align="center">Update Age</h2>
+    <form action="/age" method="post">
+        <div class="form-group">
+            <input autocomplete="off" class="form-control" autofocus name="age" type="text" placeholder="Update Age">
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}

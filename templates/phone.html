@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Phone Number
+{% endblock %}
+
+{% block main %}
+    <form action="/phone" method="post">
+        <div class="form-group">
+            <input class="form-control" autocomplete="off" autofocus type="text" name="phone" placeholder="Update Phone Number">
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}

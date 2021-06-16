@@ -1,0 +1,31 @@
+- Should the profile page have the ability to change each item individually instead of having to change all at once?
+    - ie make several buttons, one beside each item in profile <-- DONE
+    - Would then send user to a seperate route/page for the different buttons clicked? <-- DONE
+- Should the items in the tables have the ability to be deleted?
+    - Would have a button by the side that had a href to a delete row in SQL route
+    - Then would reload the page to where it originally was
+- For layout:
+    - Have links either at top in a row or bottom in a row/footer, not stacked <-- DONE
+    - Background color? Dropdown menu? <-- DONE
+- For login:
+    - Make main page one color? <-- DONE
+    - Bring login to center and have border? <-- DONE
+    - Needs to look professional! Do research!
+- For register:
+    - Add organization / flow / professionalism to page
+- For index:
+    - Need to find a way to change the background color <-- DONE
+    - What should the color scheme be? Blue? Purple? Etc? <-- DONE (Blues, pastels)
+- For apology:
+    - Simple apology box should show up
+    - Is there a way to do it without taking the user to an entirely different page? i.e. if user inputs wrong password, can it just show up below box?
+- For Prayer List:
+    - Look more professional! Use Bootstrap!
+    - Use the toggle search thingymabob
+- Needs to be more colorful <-- DONE
+- Need to make icons for each 'app' in Canva <-- DONE
+- Work on organizing each page
+- See how to launch on Heroku
+- Work on the txt file for the final project
+- Make final video for project
+- 

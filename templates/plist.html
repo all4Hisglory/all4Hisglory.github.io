@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Prayer List
+{% endblock %}
+
+{% block main %}
+    <h2 align="center" class="back">Add a Prayer Request</h2>
+    <form action="/plist" method="post" align="center">
+        <input autocomplete="off" autofocus type="text" name="request" placeholder="Prayer Request">
+        <input autocomplete="off" autofocus type="text" name="name" placeholder="Name (Optional)">
+        <input type="date" name="date">
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <h4 align="center" class="back">Sort By Name</h4>
+    <form action="/sort" method="post" align="center">
+        <input autocomplete="off" autofocus type="text" name="query" placeholder="Name">
+        <a href="/sort"><button type="submit" class="btn btn-default">Sort</button></a>
+    </form>
+    <table>
+        <thead>
+            <td>Request</td>
+            <td>Name</td>
+            <td>Date</td>
+        </thead>
+        <tbody>
+             {% for item in row %}
+             <tr>
+                 <td>{{ item.request }}</td>
+                 <td>{{ item.name }}</td>
+                 <td>{{ item.date }}</td>
+                 
+             </tr>
+             {% endfor %}
+        </tbody>
+    </table>
+   
+{% endblock %}

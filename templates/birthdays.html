@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Birthdays
+{% endblock %}
+
+{% block main %}
+    <h2 align="center" class="back">Add a Birthday</h2>
+    <form action="/birthdays" method="post" align="center">
+        <input autocomplete="off" autofocus type="text" name="name" placeholder="Name">
+        <input type="date" name="date">
+        <button type="submit" class="btn btn-default">Add</button>
+    </form>
+    <h4 align="center" class="back">Sort By Date:</h4>
+    <form action="/sortb" method="post" align="center">
+        <input type="date" name="date">
+    <a href="/sortb"><button type="submit" class="btn btn-default">Sort</button></a>
+    </form>
+    <table>
+        <thead>
+            <td>Name</td>
+            <td>Date</td>
+        </thead>
+        <tbody>
+            {% for item in row %}
+            <tr>
+                <td>{{ item.name }}</td>
+                <td>{{ item.date }}</td>
+                </form>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

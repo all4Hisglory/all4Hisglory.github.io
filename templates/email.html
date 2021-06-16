@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Email
+{% endblock %}
+
+{% block main %}
+    <h2 align="center">Update Email</h2>
+    <form action="/email" method="post">
+        <div class="form-group">
+            <input class="form-control" autofocus autocomplete="off" type="email" name="email" placeholder="Update Email">
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Prayer List
+{% endblock %}
+
+{% block main %}
+
+    <table>
+        <thead>
+            <td>Request</td>
+            <td>Name</td>
+            <td>Date</td>
+        </thead>
+        <tbody>
+            {% for item in row %}
+            <tr>
+                <td>{{ item.request }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="/plist"><button type="submit" class="btn btn-default">Back</button></a>
+{% endblock %}
