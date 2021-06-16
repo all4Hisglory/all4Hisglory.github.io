@@ -1,1 +1,14 @@
-Hello World
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="back" align="center">
+        <h2 align="center" class="indexhead">Welcome, {{ username }}!</h2>
+        <a href="/plist"><img src="static/prayerlist.png" class="photos" alt="Prayer List"></a>
+        <a href="/budget"><img src="static/budget.png" class="photos" alt="Budget"></a>
+        <a href="/birthdays"><img src="static/birthday.png" class="photos" alt="Birthday Tracker"></a>
+    </div>
+{% endblock %}
